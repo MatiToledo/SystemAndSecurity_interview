@@ -1,0 +1,71 @@
+.main {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: grid;
+  max-width: 100vw;
+  padding: 20px;
+  gap: 20px;
+  column-gap: 30px;
+
+  @media (width >= 768px) {
+    grid-template-rows: calc(100vh - 326px) 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "about interests"
+      "contact contact";
+  }
+
+  @media (width >= 1024px) {
+    grid-template-rows: calc(100vh - 326px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: none;
+  }
+}
+
+.arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+
+  @media (width >= 768px) {
+    display: block;
+  }
+
+  @media (width >= 1024px) {
+    display: none;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.spinner {
+  width: 50px; /* Adjust the size of the spinner according to your needs */
+  height: 50px;
+  margin-top: 2px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border-top-color: rgba(0, 0, 0, 0.7);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

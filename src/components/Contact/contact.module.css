@@ -1,0 +1,57 @@
+.main {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+
+  @media (width >= 768px) {
+    grid-column: span 2;
+  }
+
+  @media (width >= 1024px) {
+    grid-column: 3;
+  }
+}
+
+.button {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  height: 35px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: var(--white-100);
+}
+
+.StyledSpinner {
+  width: 20px; /* Adjust the size of the spinner according to your needs */
+  height: 20px;
+  margin-top: 2px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border-top-color: rgba(0, 0, 0, 0.7);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
