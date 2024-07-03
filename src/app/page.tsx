@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <h1>System and Security</h1>
+        <h1>Security and System</h1>
         <button onClick={handleClick} className={styles.button}>
           Go to profile
         </button>
